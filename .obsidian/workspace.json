@@ -1,0 +1,280 @@
+{
+  "main": {
+    "id": "be5586dd5e72667f",
+    "type": "split",
+    "children": [
+      {
+        "id": "f6774a3a91a7c044",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "eefbca4e14ed1a44",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "K8s Architecture.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "K8s Architecture"
+            }
+          },
+          {
+            "id": "6c83981bd7b7e021",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Untitled.canvas",
+                "viewState": {
+                  "x": 0,
+                  "y": 93,
+                  "zoom": 0
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Untitled"
+            }
+          },
+          {
+            "id": "67aa0e212aa45779",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "K8s Architecture.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "K8s Architecture"
+            }
+          },
+          {
+            "id": "e457f2584539e63a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "k8s Networking.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "k8s Networking"
+            }
+          },
+          {
+            "id": "f805ed20be67ae02",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "k8s YAML Types.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "k8s YAML Types"
+            }
+          },
+          {
+            "id": "f5f8478347bbc73b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "K8s Architecture.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "K8s Architecture"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "70188279ba83fcaf",
+    "type": "split",
+    "children": [
+      {
+        "id": "31cb070c24da18ee",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c8601d4d8afd0316",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "2fd098ba4763dc8e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "367cbcf3e4d4018a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "eb971daf5bb4a7dc",
+    "type": "split",
+    "children": [
+      {
+        "id": "c3d3444cf727b383",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "907c78fb57c35262",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "K8s Command List (Use kubectl as example).md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for K8s Command List (Use kubectl as example)"
+            }
+          },
+          {
+            "id": "d6f0e4e829660813",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "K8s Command List (Use kubectl as example).md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from K8s Command List (Use kubectl as example)"
+            }
+          },
+          {
+            "id": "00c246024458ad3b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "47ce1ee257a356f4",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "e32f310cbb925343",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "K8s Command List (Use kubectl as example).md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of K8s Command List (Use kubectl as example)"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "f5f8478347bbc73b",
+  "lastOpenFiles": [
+    "Untitled.canvas",
+    "K8s Architecture.md",
+    "未命名.md",
+    "K8s Command List (Use kubectl as example).md",
+    "kubernetes",
+    "id_github_rsa.pub",
+    "id_github_rsa",
+    "kubernetes/k8s YAML Types.md",
+    "k8s YAML Types.md",
+    "K8s Services.md",
+    "k8s Networking.md",
+    "kubernetes/K8s Services.md",
+    "kubernetes/K8s Command List (Use kubectl as example).md",
+    "kubernetes/K8s Architecture.md",
+    "kubernetes/k8s Networking.md",
+    "Welcome.md"
+  ]
+}
