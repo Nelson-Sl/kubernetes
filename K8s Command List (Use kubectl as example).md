@@ -11,6 +11,7 @@
 	* **-o yaml**: output as YAML file
 * **kubectl version**: Check version of Kubernetes
 * **kubectl get all**: Get all created resources of kubernetes 
+* **kubectl delete -f .**: Delete all created resources in the folder
 
 ### Related to ReplicaSet
 ---
@@ -35,3 +36,4 @@
 * **kubectl rollout history [Deployment name]**: check the rollout history of deployment and causing steps
 * **kubectl rollout undo deployment [Deployment name]**: Rollback the deployment rollout / update
 * **kubectl apply -f [Deployment YAML]** / **kubectl set image [Deployment name] **[configuration name]** : Change the configuration of Deployment
+* **kubectl scale deployment [Deployment name] --replicas = [number]**: Scale up & Down the replica of specific deployment
