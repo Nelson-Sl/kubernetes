@@ -35,4 +35,6 @@ runtime-->Docker["Docker Through ContainerD"]
 * **Kubectl**
 * **ctr**: Use for **ContainerD** in debugging, not user friendly with limited features
 * **NerdCtl**: Use for **ContainerD** runtime in actual practice, docker-like command line tool
+	* Support **Docker Compose** & Other new features like encrypted images
 * **CriCtl**: Use for other container compatible with **Command Runtime Interface (CRI)** for debugging purpose (E.g. Rocket)
+* **Kubeadm**: a tool built to provide `kubeadm init` and `kubeadm join` as best-practice "fast paths" for creating Kubernetes clusters.
