@@ -25,6 +25,7 @@ MasterNode-->scheduler["Scheduler: distribute work/newly-created container acros
 MasterNode-->controller["Controller: Responsible for monitoring the status of node and replicaset, process nodes orchestration & auto-scaling"]
 WorkerNode-->kubelet["Kubelet: Runs in each node for communicating master node & deliver health status"]
 WorkerNode-->runtime["Container Rumtime: Underlying software to run container"]
+WorkerNode-->Kube-Proxy["Kube-Proxy: a lightweight process to monitor for Service creations and configure network rules that redirect traffic to the corresponding pods (E.g. Setting up IP table rules)"]
 runtime-->Rocket
 runtime-->Docker["Docker Through ContainerD"]
 ```

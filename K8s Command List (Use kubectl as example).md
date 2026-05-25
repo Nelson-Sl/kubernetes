@@ -1,4 +1,4 @@
-* **kubectl run**: deploy an application / node to cluster with pod created
+* **kubectl run [image-name] --image=[image-name]**: deploy an application / node to cluster with pod created
 * **kubectl create deployment**: deploy an application / node to cluster within a special pod
 * **kubectl cluster-info**: Get metadata / information about cluster
 * **kubectl get nodes**: Get list of all nodes inside a container
