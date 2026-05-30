@@ -1,4 +1,6 @@
 * **kubectl run [image-name] --image=[image-name]**: deploy an application / node to cluster with pod created
+	* **-o yaml > [output-path]**: output as yaml
+	* **--dryrun=client**: don't create the resource actually, use along with **-o=yaml** when we just want to output **yaml**
 * **kubectl create deployment**: deploy an application / node to cluster within a special pod
 * **kubectl cluster-info**: Get metadata / information about cluster
 * **kubectl get nodes**: Get list of all nodes inside a container
@@ -17,6 +19,9 @@
 ---
 
 * **kubectl create -f [ReplicaSet YAML]**: create replicaSet based on YAML file
+	* -**-image=[image-name]**: create replicaset based on image directly
+	* **-o yaml > [output-path]**: output as yaml
+	* **--dryrun=client**: don't create the resource actually, use along with **-o=yaml** when we just want to output yaml
 * **kubectl get replicaset**: Get the information of ReplicaSet
 * **kubectl delete replicaset [ReplicaSet name]**: Delete created ReplicaSet
 * **kubectl replace -f [ReplicaSet YAML]**: Update ReplicaSet based on YAML file
