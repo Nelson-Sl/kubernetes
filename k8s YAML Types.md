@@ -11,6 +11,8 @@ kind: Pod
 metadata:
 
   name: nginx
+  
+  namespace: default
 
   labels:
 
@@ -38,6 +40,8 @@ kind: ReplicaSet
 metadata:
 
   name: myapp-replicaset
+  
+  namespace: default
 
   labels:
 
@@ -58,6 +62,8 @@ spec:
     metadata:
 
       name: nginx
+      
+      namespace: default
 
       labels:
 
@@ -89,6 +95,8 @@ metadata:
   labels:
 
     app: myapp
+    
+    namespace: default
 
     tier: frontend
 
@@ -120,3 +128,50 @@ spec:
 
         image: nginx
 ```
+
+# Namespace
+---
+
+* Definition: provide a mechanism for **isolating groups of resources within a single cluster**.
+* Sample file:
+```
+apiVersion: v1
+
+kind: Namespace
+
+metadata:
+
+  name: dev
+```
+
+# Resource Quota
+---
+
+* Definition: limit the resource for a special namespace
+* Sample File:
+```
+apiVersion: v1
+
+kind: ResourceQuota
+
+metadata:
+
+	namespace: dev
+	
+	name: resource-quota
+	
+spec:
+
+	hard:
+	
+		pods: "10"
+		
+		requests.cpu: "4"
+		
+		requests.memory: 5Gi
+		
+		limits.cpu: "5"
+		
+		limits.memory: 10Gi
+```
+
