@@ -114,12 +114,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "K8s Services.md",
+                "file": "K8s Architecture.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "K8s Services"
+              "title": "K8s Architecture"
             }
           }
         ],
@@ -288,13 +288,13 @@
   },
   "active": "1183f4c76a7920ee",
   "lastOpenFiles": [
-    "Pasted image 20260613165944.png",
-    "k8s YAML Types.md",
-    "K8s Architecture.md",
-    "K8s Command List (Use kubectl as example).md",
     "K8s Cloud vs Self-Hosted.md",
-    "K8s Services.md",
+    "K8s Command List (Use kubectl as example).md",
     "k8s Networking.md",
+    "K8s Services.md",
+    "k8s YAML Types.md",
+    "Pasted image 20260613165944.png",
+    "K8s Architecture.md",
     "Untitled.canvas",
     "kubernetes",
     "id_github_rsa.pub",
