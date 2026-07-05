@@ -128,16 +128,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "K8s Command List (Use kubectl as example).md",
+                "file": "k8s YAML Types.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "K8s Command List (Use kubectl as example)"
+              "title": "k8s YAML Types"
+            }
+          },
+          {
+            "id": "dde9df38e2163cf5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "K8s Declarative Command.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "K8s Declarative Command"
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -300,16 +314,17 @@
       "bases:新建数据库": false
     }
   },
-  "active": "87ee306d673f0576",
+  "active": "dde9df38e2163cf5",
   "lastOpenFiles": [
-    "K8s Cloud vs Self-Hosted.md",
-    "k8s Namespaces.md",
-    "K8s Services.md",
-    "k8s YAML Types.md",
-    "K8s Command List (Use kubectl as example).md",
     "K8s Architecture.md",
+    "K8s Declarative Command.md",
+    "k8s YAML Types.md",
+    "K8s Services.md",
     "k8s Networking.md",
+    "k8s Namespaces.md",
+    "K8s Command List (Use kubectl as example).md",
     "Pasted image 20260613165944.png",
+    "K8s Cloud vs Self-Hosted.md",
     "Untitled.canvas",
     "kubernetes",
     "id_github_rsa.pub",

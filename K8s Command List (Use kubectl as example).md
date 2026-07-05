@@ -23,10 +23,11 @@
 	* -**-image=[image-name]**: create replicaset based on image directly
 	* **-o yaml > [output-path]**: output as yaml
 	* **--dryrun=client**: don't create the resource actually, use along with **-o=yaml** when we just want to output yaml
-	* **--namespce=[namespace]**: create in specific namespace
+	* **--namespace=[namespace]**: create in specific namespace
 * **kubectl get replicaset**: Get the information of ReplicaSet
 * **kubectl delete replicaset [ReplicaSet name]**: Delete created ReplicaSet
 * **kubectl replace -f [ReplicaSet YAML]**: Update ReplicaSet based on YAML file
+	* **--force**: delete origin product and fully replaced by the new one
 * **kubectl scale --replicas = 6 -f [ReplicaSet YAML]**: Scale up ReplicaSet to 6 instances and update YAML file correspondingly
 * k**ubectl describe replicaset [ReplicaSet name]**: Showing the metadata / information about replicaset
 * **kubectl edit replicaset [ReplicaSet name]**: Editing the YAML template file of ReplicaSet
@@ -51,3 +52,11 @@
 * **kubectl create -f [ResourceQuota YAML]**: create resource quota for namespace in YAML file
 * **kubectl create namespace [Namespace name]**: create namespace in one command
 * **kubectl config set-context $(kubectl config current-context) --namepace=[Namespace name]**: set default namespace in k8s cluster
+
+## Help Commands
+---
+
+* **kubectl api-resources**: showing all information about resources (E.g. shortName, apiVersion)
+* **kubectl explain [resource name]**: can explain the resource and the belonging fields of resources
+	* **kubectl explain [resource name]**.[sub resource name]: showing the explain and belonging fields of sub resources (E.g. spec attribute in pod)
+	* **--recursive**: showing all pods and resources belongs to this file
