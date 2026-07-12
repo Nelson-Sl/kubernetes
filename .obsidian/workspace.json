@@ -330,8 +330,12 @@
   },
   "active": "cffc38fad3484312",
   "lastOpenFiles": [
-    "K8s Command List (Use kubectl as example).md",
+    "k8s scheduling/Scheduling CLI List.md",
     "k8s scheduling/Schedule Pods In Nodes.md",
+    "k8s scheduling/assets/Pasted image 20260712174529.png",
+    "k8s scheduling/assets",
+    "Node Affinity.md",
+    "K8s Command List (Use kubectl as example).md",
     "k8s scheduling",
     "K8s Declarative Command.md",
     "K8s Architecture.md",

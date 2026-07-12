@@ -113,3 +113,93 @@ template:
       image: simple-webapp   
 ```
 
+# Schedule Pods: Restricting Pods to specific node
+---
+
+## Taints & Tolerations
+---
+
+It is used to schedule what pods can be scheduled on a node. **Only pods that can tolerate a taint could be used to schedule on that node** (But its not guaranteed, it could also be scheduled to node that don't have any taints as well).
+
+Examples:
+* Using the following examples to add taint to one node, the taint effect could be one of the following attributes:
+  * **NoSchedule**: No new Pods will be scheduled on the tainted node unless they have a matching toleration.
+  * **PreferNoSchedule**: The control plane will **_try_ to avoid placing a Pod that does not tolerate the taint on the node**, but it is not guaranteed.
+  * **NoExecute**: Affect the existing pods. E.g. Pods that set up *tolerantSeconds* will only be tolerant in specified times after set up
+```
+$ kubectl taint nodes <node-name> key=value:taint-effect
+```
+* Add tolerant rules in pod
+```
+apiVersion: v1
+kind: Pod
+metadata:
+ name: myapp-pod
+spec:
+ containers:
+ - name: nginx-container
+   image: nginx
+ tolerations:
+ - key: "app"
+   operator: "Equal"
+   value: "blue"
+   effect: "NoSchedule"
+```
+
+## Node Selectors
+---
+
+Adding node selectors and set up match labels when set up pods can set up what node could schedule pods. But the cons is **it can't satisfy multiple conditions as needed** and for this case it should apply [[#^Node Affinity]].
+
+Example:
+* Adding label for nodes
+```
+$ kubectl label nodes node-1 size=Large
+```
+* Match Label using **nodeSelectors** when defining pod
+```
+apiVersion: v1
+kind: Pod
+metadata:
+ name: myapp-pod
+spec:
+ containers:
+ - name: data-processor
+   image: data-processor
+ nodeSelector:
+  size: Large
+```
+
+## Node Affinity
+---
+
+Another way to ensure pod to **host on particular nodes**, with support on multiple conditions and comparisons (E.g. advanced expressions). The affinity type includes following:
+
+* requiredDuringSchedulingIgnoredDuringExecution (Available)
+- preferredDuringSchedulingIgnoredDuringExecution (Available)
+- requiredDuringSchedulingRequiredDuringExecution (Planned)
+- preferredDuringSchedulingRequiredDuringExecution (Planned)
+
+![[Pasted image 20260712174529.png]]
+
+Example:
+```
+apiVersion: v1
+kind: Pod
+metadata:
+ name: myapp-pod
+spec:
+ containers:
+ - name: data-processor
+   image: data-processor
+ affinity:
+   nodeAffinity:
+     requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: size
+            operator: In
+            values: 
+            - Large
+            - Medium
+```
