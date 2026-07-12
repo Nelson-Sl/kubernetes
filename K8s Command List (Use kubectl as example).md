@@ -8,6 +8,7 @@
 * **kubectl get pods**: Get list of pods running in all nodes of a cluster
 	* **-o wide**: list all pods with more details
 	* **--all-namespaces (-A)**: list all pods with all namespaces
+	* **--selector**: filter selector by labels
 * **kubectl describe pod [pod-name]**: Get metadata / information about pod itself
 * **kubectl delete pod [pod-name]**: Delete created / running pod
 * **kubectl edit pod [pod-name]**: Edit pod service using default editor
