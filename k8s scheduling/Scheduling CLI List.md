@@ -11,3 +11,9 @@
 * `kubectl taint nodes <node-name> key=value:taint-effect-`: untaint / delete taint on nodes
 * `kubectl describe node <node-name> |grep Taint`: checking taint rules in node
 
+# DaemonSets
+---
+
+* `kubectl get daemonsets`: get all daemonset from current namespace
+* `kubectl describe daemonset [daemonset-name]`: get details for daemonset
+

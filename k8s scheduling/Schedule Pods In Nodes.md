@@ -203,3 +203,135 @@ spec:
             - Large
             - Medium
 ```
+
+# Schedule Pods: Based on Resources Requirements
+---
+
+## Resource Category
+---
+
+* CPU
+	* Lowest Number: **0.1 = 100milli** 
+	* Lowest Number with Unit: **1m = 1milli**
+	* 1 CPU = **1000milli** = **1 AWS vCPU/Azure Core/GCP Core/HyperThread** 
+	* When pod / node try to exceeds CPU limit, system will **throttle the usage of CPU** and don't let it exceed out, pod still running
+* Memory (Mem)
+	* 1K = 1 KiloByte = 1000 Bytes
+	* 1M = 1 MegaByte = 1,000,000 Bytes
+	* 1G = 1 GigaByte = 1,000,000,000 Bytes
+	* 1Ki = 1 KibiByte = 1024 Bytes
+	* 1Mi = 1 MebiByte = 1,048,576 Bytes
+	* 1Gi = 1 GibiByte = 1,073,741824 Bytes
+	* When pod / node try to exceed Memory Limit, it can run but **pod will be terminated** if it exceeds constantly due to `OOM (Out of Memory)`
+
+## Default Behavior In Multiple-Node Cluster
+---
+
+By default, there are **no resources and limits** for nodes in cluster. `Kube-Scheduler` will distribute pod to node that have most sufficient amount of resources.
+
+If there's no sufficient resources in all nodes in cluster, the pod will be in `pending` state due to insufficient cpu / memory.
+
+## Define Resources Requirements Per Pod
+---
+
+### Define it in Pod Settings
+---
+
+* Can define following attributes in `spec.containers.resources` in following attributes:
+	* requests: describes the **minimum** amount of compute resources required. It can't exceed limits and will be set as equilavent to limits if unspecified.
+	* limits: describes the **maximum** amount of compute resources allowed.
+* Best Practice: **Setting up requests but no limits**, so that when one pod has been with sufficient usage they can increase the unit for other cycle as well.
+* Examples
+```
+apiVersion: v1
+
+kind: Pod
+
+metadata:
+
+  name: nginx1
+
+  labels:
+
+    env: production
+
+spec:
+
+  containers:
+
+  - name: nginx1
+
+    image: nginx
+    
+  resources:
+  
+	  requests:
+	  
+		  memory: "4Gi"
+		  
+		  cpu: 2
+		  
+	  limits:
+	  
+		  memory: "8Gi"
+		  
+		  cpu: 4
+```
+
+### Setting Defaults for All Pods
+---
+
+To set up default resource requirements for all pods, `LimitRange` could be used as an example to set up at **namespace** level.
+
+Examples:
+```
+apiVersion: v1
+
+kind: LimitRange
+
+metadata:
+
+	name: resource-constraint
+	
+spec:
+
+	limits: 
+	
+	- default / max: (limit)
+	  cpu: 1m (or memory: 1Gi)
+	  
+	  defaultRequest / min: (Request)
+	  cpu: 1m (or memory: 1Gi)
+	  
+	  type: Container
+```
+
+
+## Define Resources Requirements At Node / Cluster Level
+---
+
+To restrict the resource requirements for all pods in Cluster / all nodes, we can define it in `resourceQuota` at **namespace** level
+
+Example:
+```
+apiVersion: v1
+
+kind: ResourceQuota
+
+metadata:
+
+	name: my-resource-quota
+	
+spec:
+
+	hard:
+	
+		requests.cpu: 4
+		
+		requests.memory: 4Gi
+		
+		limits.cpu: 10
+		
+		limits.memory: 10Gi
+```
+
